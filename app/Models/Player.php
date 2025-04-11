@@ -5,9 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class GameDeveloper extends Model  // estendono la classe genitore Model
+class Player extends Model  // estendono la classe genitore Model
 {
     use HasFactory;
+
+    // qu dobbiamo settare quali dati verranno salvati nel database
 
 
 
@@ -18,7 +20,8 @@ class GameDeveloper extends Model  // estendono la classe genitore Model
     // Questa proprietà definisce i campi del mio modello, di base è un array e dentro andremo a inserire i nomi dei campi
     protected $fillable = [  
         'name',
-        'description',
+        'surname',
+      
         
     ];
 

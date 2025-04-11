@@ -19,6 +19,14 @@
       </div>
     </div>
   </div>
+
+
+  @if (session()->has('successMessage'))  <!-- if per il controllo se ce un sessione di nome successMessage allora creami un div -->
+  <div class="alert alert-success">
+    {{session('successMessage')}} <!--richiamiamo all'interno il nome della sessione -->
+  </div>
+@endif
+  
 </header>
 
 
@@ -32,38 +40,7 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-12 col-md-6 mx-auto">
-      <form action="{{ route('player.collection') }}" method="POST">
-        @csrf
-
-        <!-- Colonna name-->
-        <div class="mb-3">
-          <label for="name" class="form-label">Nome del giocatore</label>
-          <input 
-            name="name" 
-            type="text" 
-            class="form-control" 
-            id="name"
-          >            
-        </div>
-
-        <!-- Colonna surname-->
-        <div class="mb-3">
-          <label for="surname" class="form-label">Cognome del giocatore</label>
-          <input 
-            name="surname" 
-            type="text" 
-            class="form-control" 
-            id="surname"
-          >            
-        </div>
-
-        <button type="submit" class="btn btn-primary">Invia dati</button>
-      </form>
-    </div>
-  </div>
-</div>
+  
 
 
 

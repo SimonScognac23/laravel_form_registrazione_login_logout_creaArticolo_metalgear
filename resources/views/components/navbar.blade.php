@@ -12,8 +12,12 @@
           <a class="nav-link active" aria-current="page" href="{{ route('home.page') }}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('gamedeveloper.index') }}">Lista dei giocatori</a>
+          <a class="nav-link" href="{{ route('player.create') }}">Inserisci i giocatori</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('player.index') }}">Vedi i giocatori </a>
+        </li>
+
       </ul>
     </div>
   </div>
