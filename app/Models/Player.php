@@ -21,6 +21,7 @@ class Player extends Model  // estendono la classe genitore Model
     protected $fillable = [  
         'name',
         'surname',
+        'img'  //ISTRUISCO IL FILLABLE A PRENDERE ANCHE L'INFORMAZIONE IMG
       
         
     ];
