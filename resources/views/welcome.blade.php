@@ -21,12 +21,7 @@
   </div>
 
 
-  @if (session()->has('successMessage'))  <!-- if per il controllo se ce un sessione di nome successMessage allora creami un div -->
-  <div class="alert alert-success">
-    {{session('successMessage')}} <!--richiamiamo all'interno il nome della sessione -->
-  </div>
-@endif
-  
+ 
 </header>
 
 

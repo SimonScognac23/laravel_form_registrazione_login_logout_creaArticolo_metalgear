@@ -21,3 +21,30 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+
+
+
+
+/*----------------------PAGINA DELLE CARD ----------------------------------------------------------------------------------- */
+
+
+.card .row {
+    display: flex;
+}
+
+.card .col-md-4 {
+    flex: 1 0 100%;
+    /* Aumenta la larghezza della colonna dell'immagine */
+}
+
+.card .col-md-8 {
+    flex: 1 0 100%;
+    /* Aumenta ulteriormente la larghezza della colonna del testo */
+}
+
+
+.card-body {
+    padding: 1.5rem;
+    /* Distanza più ampia tra il bordo della card e il contenuto */
+}

@@ -1,16 +1,21 @@
 
 
-
-
-<div class="card" style="width: 18rem;">
-    <img src="{{Storage::url($player->img)}}" class="card-img-top" alt="...">
-    
-    <div class="card-body">
-        <h5 class="card-title">{{$player->name}}</h5>
-        <p class="card-text">{{$player->surname}}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="col-md-6 col-lg-4 mb-4">
+  <div class="card h-100">
+    <div class="row g-0 h-100">
+      <div class="col-4">
+        <img src="{{ Storage::url($player->img) }}" class="img-fluid rounded-start h-100 object-fit-cover" alt="{{ $player->name }}">
+      </div>
+      <div class="col-8">
+        <div class="card-body d-flex flex-column justify-content-center">
+          <h5 class="card-title">{{ $player->name }}</h5>
+          <p class="card-text">{{ $player->surname }}</p>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
+
 
 
 <!-- {{$player->name}} QUESTO LO POSSO FARE GRAZIE AL PASSAGGIO DI DATI CHE 

@@ -1,5 +1,7 @@
+
 <x-layout>
 
+    <!-- HEADER -->
     <header class="header2">
         <div class="container">
             <div class="row justify-content-center align-items-center">
@@ -9,6 +11,13 @@
             </div>
         </div>
     </header>
+
+    <!-- MESSAGGIO DI SUCCESSO SE PRESENTE -->
+    @if (session()->has('successMessage'))  <!-- if per il controllo se c'è una sessione di nome successMessage allora creami un div -->
+        <div class="alert alert-success">
+            {{ session('successMessage') }} <!-- richiamiamo all'interno il nome della sessione -->
+        </div>
+    @endif
 
     <!-- CODICE PER MOSTRARE ERRORI DI VALIDAZIONE -->
     @if ($errors->any())
@@ -21,6 +30,7 @@
         </div>
     @endif
 
+    <!-- FORM DI INSERIMENTO -->
     <div class="row">
         <div class="col-12 col-md-6 mx-auto">
             <form method="POST" action="{{ route('player.submit') }}" enctype="multipart/form-data">
@@ -28,7 +38,7 @@
 
                 <!-- INSERIRE ENCTYPE QUANDO VOGLIAMO PASSARE DATI PIÙ COMPLESSI DI SEMPLICI STRINGHE O NUMERI -->
 
-                <!-- COLONNA NAME -->
+                <!-- CAMPO NAME -->
                 <div class="mb-3">
                     <label for="name" class="form-label">Nome del giocatore</label>
                     <input 
@@ -39,10 +49,9 @@
                         id="name"
                     >            
                 </div>
-
                 <!-- NAME DEVE CORRISPONDERE A QUELLO CHE È SCRITTO NEL MODELLO COSÌ DA POTER SALVARE IL DATO -->
 
-                <!-- COLONNA SURNAME -->
+                <!-- CAMPO SURNAME -->
                 <div class="mb-3">
                     <label for="surname" class="form-label">Cognome del giocatore</label>
                     <input 
@@ -54,7 +63,7 @@
                     >            
                 </div>
 
-                <!-- COLONNA INSERISCI IMMAGINE, BISOGNA CAMBIARE IL TIPO DI TEXT IN FILE! -->
+                <!-- CAMPO IMMAGINE (DA CAMBIARE TIPO DA TEXT A FILE) -->
                 <div class="mb-3">
                     <label for="img" class="form-label">Inserisci Immagine</label>
                     <input 
@@ -65,6 +74,7 @@
                     >            
                 </div>
 
+                <!-- BOTTONE DI INVIO -->
                 <button type="submit" class="btn btn-primary">Invia dati</button>
             </form>
         </div>

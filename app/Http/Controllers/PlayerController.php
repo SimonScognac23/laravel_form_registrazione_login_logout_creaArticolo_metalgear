@@ -46,11 +46,15 @@ class PlayerController extends Controller
         // ASSEGNA UN VALORE A $IMG SOLO SE L'UTENTE TE LO HA PASSATO
         if ($request->file('img')) {
             //   FORM   //
-            $img = $request->file('img')->store('public/img'); 
+            $img = $request->file('img')->store('img', 'public'); 
             // METTERÒ LA REQUEST PERCHÉ È LA REQUEST CHE È STATA CATTURATA NEL FORM
             // IL METODO file() MI CATTURA IL FILE CARICATO DALLA REQUEST, OSSIA L'INPUT DI TIPO FILE
             // IL METODO store() MI SALVA I FILE NEL PERCORSO storage/app/public/img (NEL MIO CASO SPECIFICO)
+        }  else {
+            // Se img = NULL allora fai questo...
+            $img = 'img/black.jpg';
         }
+    
 
 
 
@@ -88,7 +92,7 @@ class PlayerController extends Controller
             'img' => $img  // LA NUOVA INFORMAZIONE IMG LA ASSOCIAMO ALLA VARIABILE $IMG, PRIMA PERO DOBBIAMO ISTRUIRE IL MODELLO AD ACCETTARE LA VARIABILE IMG E LO FACCIO DENTRO IL FILLABLE NEL MODEL
         ]);     
 
-        return redirect()->route('home.page')->with('successMessage', 'Hai correttamente inserito il tuo giocatore');  // back significa torna indietro alla pagina in cui stavi
+        return redirect()->route('player.create')->with('successMessage', 'Hai correttamente inserito il tuo giocatore');  // back significa torna indietro alla pagina in cui stavi
         // SUCCESS MESSAGE >>> CHIAVE
         // HAI CORRETTAMENTE.... >> PRODOTTO
     }
