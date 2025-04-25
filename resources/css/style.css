@@ -48,3 +48,76 @@
     padding: 1.5rem;
     /* Distanza più ampia tra il bordo della card e il contenuto */
 }
+
+
+/*----------------------PAGINA DELLE CARD 2 ----------------------------------------------------------------------------------- */
+
+
+.article-card {
+    background-color: #1b1f1d;
+    /* nero opaco */
+    color: #cde0c9;
+    /* testo verde chiaro militare */
+    border: 2px solid #4b8b3b;
+    /* verde militare */
+    box-shadow: 0 0 15px rgba(75, 139, 59, 0.3);
+    border-radius: 10px;
+}
+
+.article-card-header {
+    background-color: #4b8b3b;
+    /* verde militare */
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 2px solid #2f5d28;
+}
+
+.article-image {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.article-subtitle {
+    color: #86c86d;
+    /* tonalità di verde più chiara */
+    font-weight: 600;
+}
+
+
+/*----------------------PAGINA SHOW ----------------------------------------------------------------------------------- */
+
+.article-body-card {
+    background-color: #121614;
+    /* nero militare opaco */
+    color: #d0e6c3;
+    /* verde chiaro leggibile */
+    border: 2px solid #4b8b3b;
+    /* verde militare */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(75, 139, 59, 0.4);
+}
+
+.article-body-header {
+    background-color: #4b8b3b;
+    /* verde militare scuro */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #2e5c2b;
+    padding: 0.75rem 1rem;
+}
+
+.article-body-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #cde0c9;
+    padding: 0.5rem;
+    border-left: 3px solid #4b8b3b;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: 4px;
+}

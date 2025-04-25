@@ -9,7 +9,18 @@ use App\Http\Requests\PlayerRequest;
 
 
 class PlayerController extends Controller
+
 {
+
+    // devo sovrascrivere il comportamento di base del costruttore del controller vedi pag 49 LVDB MIDDLEWARE
+ // public function (){
+
+//    $this->middleware('auth');   //il middleware vuole come primo parametro la stringa che è l'alias del nostro middleware, ovvero in questo caso AUTH 
+
+//  }
+
+
+
     public function create() {
         return view('player.create');
     }
@@ -112,7 +123,7 @@ class PlayerController extends Controller
     {
         // all'interno del modello posso richiamare diverse operazioni che mi permettono di recuperare le varie informazioni,
         // ovvero i vari Record in questo caso
-        $players = Player::all();    
+        $players = Player::all(); // questo significa fare la query al db SELECT * FROM PRODUCTS
         // recupero TUTTI i prodotti all'interno del mio database,
         // richiamo la mia classe GameDeveloper che è la classe che si mette in comunicazione tra Laravel e il database
         // e le dico di prendere tutti i dati

@@ -13,7 +13,7 @@ return new class extends Migration
 
 
     {
-        Schema::create('player', function (Blueprint $table) {  //sta creando una tabella attraverso la funzione create,    Schema è invece una classe di laravel
+        Schema::create('user', function (Blueprint $table) {  //sta creando una tabella attraverso la funzione create,    Schema è invece una classe di laravel
             // la tabella verra chiamata 'player' e quello che andro ad inserire dentro la tabella lo defnisco tramite una callback
             // $table è un oggetto  che ha le informazioni dello schema e tramite l $table mi richiamo i vari metodi
 
@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('name')->unique(); // con il metodo string() sto definendo una colonna contenente un dato di tipo string con un massimo di 255 caratteri
             // con name definisco il nome della colonna
 
-            $table->string('surname')->unique();// il metodo unique() definisce che ogni record deve avere questo campo con valore univoco
+       
 
             $table->timestamp('email_verified_at')->nullable();// timestamp crea due colonne che 
             // identificano la data di creazione e la data di aggiornamento della riga
