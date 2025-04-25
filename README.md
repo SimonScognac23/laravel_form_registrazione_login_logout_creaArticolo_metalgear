@@ -11,6 +11,8 @@ Show: Il metodo show() recupera un singolo articolo tramite la sua ID (passata c
 
 Gli altri metodi (edit, update, destroy) sono stati preparati, ma non sono ancora implementati.
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 English:
 In the ArticleController, I implemented several actions that handle CRUD (Create, Read, Update, Delete) operations for articles. Here's a summary of what I've done:
 
